@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 # Package metadata
 PACKAGE_NAME = 'oracuery'
-VERSION = '1.0.0'
+VERSION = '1.0.5'
 DESCRIPTION = 'Python module for generating SQL queries'
 LONG_DESCRIPTION = '''
 oracuery is a comprehensive Python module that simplifies database interaction by providing a set of powerful functions to generate SQL queries effortlessly. Whether you're working with databases in your web application, data analysis project, or any Python-based application, oracuery streamlines the process, saving you time and reducing the complexity of writing SQL queries.
