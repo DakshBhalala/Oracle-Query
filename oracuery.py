@@ -19,7 +19,6 @@ def create_table_query(data, table_name):
         query += column_template.format(row["Column"], row["DataType"], row["Size"]) + ", "
 
     query = query.rstrip(", ") + ");"  # Remove trailing comma and close the query
-    print(query)  # Print the generated query for debugging
     return query
 
 
@@ -46,7 +45,6 @@ def add_data_query(data, table_name, columns):
         rows.append("('" + row_values + "')")
 
     query += f";\n{temp}".join(rows) + ";"  # Append data rows and close the query
-    print(query)  # Print the generated query for debugging
     return query
 
 
@@ -62,7 +60,6 @@ def desc_table(table_name):
         str: The SQL query for describing the table.
     """
     query = f"DESC {table_name}"  # Generate the DESC query
-    print(query)  # Print the generated query for debugging
     return query
 
 
@@ -78,7 +75,6 @@ def select_query(table_name):
         str: The SQL query for selecting all rows.
     """
     query = f"SELECT * FROM {table_name};"  # Generate the SELECT * query
-    print(query)  # Print the generated query for debugging
     return query
 
 
@@ -95,7 +91,6 @@ def select_column_query(table_name, find):
         str: The SQL query for selecting specific columns.
     """
     query = f"SELECT {find} FROM {table_name};"  # Generate the SELECT query
-    print(query)  # Print the generated query for debugging
     return query
 
 
@@ -112,5 +107,4 @@ def select_raw_query(table_name, Condition):
         str: The SQL query with the specified condition.
     """
     query = f"SELECT * FROM {table_name} where {Condition};"  # Generate the SELECT query with condition
-    print(query)  # Print the generated query for debugging
     return query
